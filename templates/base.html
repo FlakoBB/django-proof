@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}BASE{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'styles/globals.css' %}">
+  {% block styles %}{% endblock %}
+</head>
+<body>
+  <header class="header_base">
+    <h1>{% block location %}Base{% endblock %}</h1>
+    <a class="link_btn" href="#">Logout</a>
+  </header>
+  <main class="main_base">
+    {% block content %}
+      Defaul content from base.html
+    {% endblock %}
+  </main>
+</body>
+</html>

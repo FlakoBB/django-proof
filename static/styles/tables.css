@@ -1,0 +1,46 @@
+/* .list_container {
+  display: flex;
+} */
+
+.list_actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.add_btn {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+  border-radius: .4rem;
+  padding: .4rem 1rem;
+  border: none;
+  outline: none;
+}
+
+.list_table {
+  width: 100%;
+}
+
+.list_table thead {
+  height: 2.5rem;
+  background-color: var(--mainColor);
+}
+
+.list_table thead tr th {
+  border-radius: .4rem;
+}
+
+.list_table tbody {
+  background-color: var(--background2);
+}
+
+.list_table tbody tr td {
+  height: 2rem;
+  border-radius: .4rem;
+}
+
+.list_table tbody tr:nth-child(odd) {
+  background-color: var(--background3);
+}

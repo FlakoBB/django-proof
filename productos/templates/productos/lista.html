@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'styles/tables.css' %}">
+{% endblock %}
+
+{% block title %}
+  Lista de Productos
+{% endblock %}
+
+{% block location %}
+  Productos
+{% endblock %}
+
+{% block content %}
+  <article class="list_container">
+    <div class="list_actions">
+      <button class="add_btn">Agregar</button>
+    </div>
+    <table class="list_table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for producto in productos %}
+          <tr>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.precio }}</td>
+            <td>{{ producto.descripcion }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </article>
+{% endblock %}
